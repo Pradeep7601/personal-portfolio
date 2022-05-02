@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body>
+    <nav>
+        <img src="img/logo2.png" alt="logo" class="logo">
+        <div class="toggle" onclick="toggleMenu();"></div>
+
+        <ul class="menu">
+            <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu();">About</a></li>
+            <li><a href="#skills" onclick="toggleMenu();">Skills</a></li>
+            <li><a href="#projects" onclick="toggleMenu();">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="home-text">
+            <h1>Hey, I'm <span> Pradeep</span> <br> Computer Science Engineering Student</h1>
+
+            <a href="#about">About Me</a>
+        </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/pradeep-poojary-18b836217/" target=”_blank”><i
+                    class='bx bxl-linkedin'></i></a>
+            <a href="https://github.com/Pradeep7601" target=”_blank”><i class='bx bxl-github'></i></a>
+            <a href="https://www.instagram.com/pradeep_poojary_7/" target=”_blank”><i class='bx bxl-instagram'></i></a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="heading">
+            <h2>About</h2>
+            <p>My introduction</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h2>I am Pradeep,</h2>
+                <p>Computer Science Engineering student currently pursuing 3rd year. My objective is to To work as a
+                    Software Engineer in your progressive organization that allows me the scope to update my knowledge
+                    to the latest trends and be part of a diverse and dynamic team that adds to both my personal and
+                    professional growth</p>
+                <a href="https://drive.google.com/file/d/1QdlZC8ltbRqGeddPHrjIRQ09S4H0Tn98/view?usp=sharing"
+                    target="_blank">Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="heading">
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-content">
+            <div class="skills-text">
+                <h2>My Skills</h2>
+                    <ul>
+                        <li>Programming Languages:  Java, Python, C , C++</li>
+                        <li>Web:  HTML, CSS, Javascript</li>
+                        <li>Operating System:  Linux, Windows</li>
+                        <li>Tools:  VS Code, Dev C++</li>
+                        <li>Others:  Github</li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects">
+        <div class="heading">
+            <h2>Projects</h2>
+            <p>Projects made by me</p>
+        </div>
+        <div class="projects-content">
+            <a href="https://pradeep7601.github.io/Tic-Tac-Toe-Fun/" target=”_blank”>
+                <div class="box">
+                    <img src="img/tictactoe.png" alt="">
+                    <h1>Tic Tac Toe fun</h1>
+                    <p>A simple 2 player Tic Tac Toe game developed using HTML, CSS and Javascript.</p>
+
+                </div>
+            </a>
+
+            <a href="https://pradeep7601.github.io/matching-cards/" target=”_blank”>
+                <div class="box">
+                    <img src="img/memory1.png" alt="">
+                    <h1>Memory Match Game</h1>
+                    <p>Memory Match Game is a matching cards game developed using HTML, CSS and Javascript.</p>
+
+                </div>
+            </a>
+            <a href="https://pradeep7601.github.io/Random-Jokes/" target=”_blank”>
+                <div class="box">
+                    <img src="img/feelin'.png" alt="">
+                    <h1>Random Jokes</h1>
+                    <p>Random Jokes is fun website which shows jokes rondomly.Random Jokes is developed using
+                        HTML, CSS and Javascript.The jokes will be
+                        fetched using javascript API call.</p>
+
+                </div>
+            </a>
+            <a href="https://pradeep7601.github.io/fun-memes/" target=”_blank”>
+                <div class="box">
+                    <img src="img/fun memes.png" alt="">
+                    <h1>Fun memes</h1>
+                    <p>Fun Memes is fun website which shows random memes.Fun memes is developed using
+                        HTML, CSS and Javascript.The memes will be
+                        fetched using javascript API call.</p>
+
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="heading">
+            <h2>Contact</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-social">
+                <h2>Contact me <br> through social media <br></h2>
+                <a href="https://www.linkedin.com/in/pradeep-poojary-18b836217/" target=”_blank”><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Pradeep7601" target=”_blank”><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/pradeep_poojary_7/" target=”_blank”><i
+                        class='bx bxl-instagram'></i></a>
+            </div>
+            <div class="contact-form">
+                <form onsubmit="sendmail(); reset();">
+                    <h2>Leave me a message..</h2>
+                    <input type="text" placeholder="Name" name="name" required>
+                    <input type="email" placeholder="Email" name="email" required>
+                    <textarea name="textarea" id="" cols="30" rows="10" placeholder="Write your message here..." required></textarea>
+                    <input type="button" value="Submit" class="contact-button">
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendmail(){
+    Email.send({
+        Host : "smtp.gmail.com",
+        Username : "",
+        Password : "",
+        To : '',
+        From : document.getElementById("email").value,
+        Subject : "New contact form enquiry",
+        Body : "Name"+document.getElementById("name").value 
+                +"<br> Email: "+ document.getElementById(email).value
+                +"<br> Message: "+ document.getElementById(textarea).value
+    }).then(
+      message => alert("Message Sent Successfully")
+    );
+}
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
