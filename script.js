@@ -1,8 +1,8 @@
 function toggleMenu (){
-    var menu = document.querySelector('.toggle');
-    var menu1 = document.querySelector('.menu');
+    var menutoggle = document.querySelector('.toggle');
+    var menu = document.querySelector('.menu');
+    menutoggle.classList.toggle('active');
     menu.classList.toggle('active');
-    menu1.classList.toggle('active');
 }
 
 const src = ScrollReveal({

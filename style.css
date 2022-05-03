@@ -162,28 +162,80 @@ nav>ul li a:hover{
     background: rgb(41, 39, 39);
     box-shadow: 0 10px 34px rgba(0,0,0,0.14);
 }
+/* skills */
 
-.skills-content{
+  
+  /*** <--- CIRCLE STYLES ---> ***/
+  .wrap-circles {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 1.8rem;
-}
-.skills-text{
-    width: 500px;
+    min-height: 100vh;
+    flex-wrap: wrap;
     justify-content: center;
-}
-.skills-text h2{
-    font-size: 1.5rem;
-    color: var(--second-color);
-    margin-bottom: 1.8rem;
-}
-.skills-text {
-    color: var(--second-color);
-    margin: 5px 0 24px;
-    line-height: 2.8rem;
-    font-weight: 500;
-}
+    align-items: center;
+    padding: 2rem 1rem;
+    background: #000;
+  }
+  
+  .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background: #8c4e4e;
+    overflow: hidden;
+  }
+  /* .circle.per-25 {
+    background-image: conic-gradient(#6f0404 25%, #8c4e4e 0);
+  } */
+  .circle.per-50 {
+    background-image: conic-gradient(#6f0404 50%, #8c4e4e 0);
+  }
+  .circle.per-75 {
+    background-image: conic-gradient(#6f0404 75%, #8c4e4e 0);
+  }
+  .circle.per-90 {
+    background-image: conic-gradient(#6f0404 90%, #8c4e4e 0);
+  }
+  .circle .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    background: #000;
+    border-radius: 50%;
+    font-size: 1.85em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .skills-content{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 1.8rem;
+  }
+  .skills-text{
+      width: 60vw;
+      justify-content: center;
+  }
+  .skills-text h2{
+      font-size: 1.5rem;
+      color: var(--second-color);
+      margin-bottom: 1.8rem;
+  }
+  .skills-text {
+      color: var(--second-color);
+      margin: 5px 0 24px;
+      line-height: 2.8rem;
+      font-weight: 500;
+  }
+
 
 .projects-content{
     display: flex;
@@ -282,6 +334,8 @@ nav>ul li a:hover{
 
 /* Responsive */
 
+/* Responsive */
+
 @media (max-width:990px){
     nav{
         padding: 10px 50px;
@@ -365,6 +419,38 @@ nav>ul li a:hover{
         padding: 35px;
     }
 }
+@media (max-width:500px){
+    .circle {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin: 0.5rem;
+        border-radius: 50%;
+    }
+    .circle .inner {
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        font-size: 1.25em;
+        font-weight: 300;
+      }
+}
+@media (max-width:350px){
+    .circle {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 0.5rem;
+        border-radius: 50%;
+    }
+    .circle .inner {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        font-size: 1em;
+        font-weight: 300;
+      }
+}
 @media (max-width:400px){
     section{
         padding: 35px;
@@ -385,8 +471,8 @@ nav>ul li a:hover{
         font-weight: 600;
     }
     .logo{
-        width: 10vh;
-        height: 5vh;
+        width: 15vh;
+        height: 8vh;
     }
     .about-content,.skills-content{
         flex-direction: column;
@@ -395,6 +481,8 @@ nav>ul li a:hover{
     .about-text,.skills-text{
         max-width: 200px;
     }
+
+    /* skills */
     .skills-text h2{
         font-size: 1.2rem;
         line-height: 2rem;
@@ -408,5 +496,21 @@ nav>ul li a:hover{
     .contact-form{
         width: 280px;
 
+    }
+    .toggle{
+        width: 40px;
+        height: 40px;
+        background: url(img/menu1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+    .toggle.active{
+        background: url(img/close1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
     }
 }

@@ -34,6 +34,7 @@
                     class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/Pradeep7601" target=”_blank”><i class='bx bxl-github'></i></a>
             <a href="https://www.instagram.com/pradeep_poojary_7/" target=”_blank”><i class='bx bxl-instagram'></i></a>
+            <a href="https://twitter.com/pradeep_7601" target=”_blank”><i class='bx bxl-twitter'></i></a>
         </div>
     </section>
 
@@ -57,18 +58,32 @@
 
     <section id="skills">
         <div class="heading">
-            <h2>Skills</h2>
+            <h2>My Skills</h2>
         </div>
         <div class="skills-content">
             <div class="skills-text">
-                <h2>My Skills</h2>
-                    <ul>
-                        <li>Programming Languages:  Java, Python, C , C++</li>
-                        <li>Web:  HTML, CSS, Javascript</li>
-                        <li>Operating System:  Linux, Windows</li>
-                        <li>Tools:  VS Code, Dev C++</li>
-                        <li>Others:  Github</li>
-                    </ul>
+                <!-- <h2>My Skills</h2> -->
+
+                <div class="wrap-circles">
+                    <div class="circle per-75">
+                        <div class="inner">Java</div>
+                    </div>
+                    <div class="circle per-50">
+                        <div class="inner">Python</div>
+                    </div>
+                    <div class="circle per-50">
+                        <div class="inner">C++</div>
+                    </div>
+                    <div class="circle per-90">
+                        <div class="inner">HTML</div>
+                    </div>
+                    <div class="circle per-90">
+                        <div class="inner">CSS</div>
+                    </div>
+                    <div class="circle per-50">
+                        <div class="inner">JS</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -132,13 +147,15 @@
                 <a href="https://github.com/Pradeep7601" target=”_blank”><i class='bx bxl-github'></i></a>
                 <a href="https://www.instagram.com/pradeep_poojary_7/" target=”_blank”><i
                         class='bx bxl-instagram'></i></a>
+                <a href="https://twitter.com/pradeep_7601" target=”_blank”><i class='bx bxl-twitter'></i></a>
             </div>
             <div class="contact-form">
                 <form onsubmit="sendmail(); reset();">
                     <h2>Leave me a message..</h2>
                     <input type="text" placeholder="Name" name="name" required>
                     <input type="email" placeholder="Email" name="email" required>
-                    <textarea name="textarea" id="" cols="30" rows="10" placeholder="Write your message here..." required></textarea>
+                    <textarea name="textarea" id="" cols="30" rows="10" placeholder="Write your message here..."
+                        required></textarea>
                     <input type="button" value="Submit" class="contact-button">
                 </form>
             </div>
@@ -151,21 +168,21 @@
     <script src=" https://smtpjs.com/v3/smtp.js"></script>
 
     <script>
-        function sendmail(){
-    Email.send({
-        Host : "smtp.gmail.com",
-        Username : "",
-        Password : "",
-        To : '',
-        From : document.getElementById("email").value,
-        Subject : "New contact form enquiry",
-        Body : "Name"+document.getElementById("name").value 
-                +"<br> Email: "+ document.getElementById(email).value
-                +"<br> Message: "+ document.getElementById(textarea).value
-    }).then(
-      message => alert("Message Sent Successfully")
-    );
-}
+        function sendmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "",
+                Password: "",
+                To: '',
+                From: document.getElementById("email").value,
+                Subject: "New contact form enquiry",
+                Body: "Name" + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById(email).value
+                    + "<br> Message: " + document.getElementById(textarea).value
+            }).then(
+                message => alert("Message Sent Successfully")
+            );
+        }
     </script>
 
     <script src="script.js"></script>
